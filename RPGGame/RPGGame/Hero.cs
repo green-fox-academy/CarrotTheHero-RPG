@@ -12,6 +12,7 @@ namespace RpgGame
     {
         int position = 0;
 
+
         public static Random rmd = new Random();
 
         public Hero(FoxDraw foxDraw)
@@ -31,7 +32,7 @@ namespace RpgGame
         }
         public void MoveLeft(FoxDraw foxDraw)
         {
-            if (position % 10 != 0)
+            if (Map.floorSurfaceList.Contains(position -1) && position % 10 != 0)
             {
                 foxDraw.AddImage("./Assets/hero-left.png", Map.CoordinateCollection[position -= 1]);
             }
@@ -42,7 +43,7 @@ namespace RpgGame
         }
         public void MoveRight(FoxDraw foxDraw)
         {
-            if (position % 10 != 9)
+            if (Map.floorSurfaceList.Contains(position + 1) && position % 10 != 9)
             {
                 foxDraw.AddImage("./Assets/hero-right.png", Map.CoordinateCollection[position += 1]);
             }
@@ -53,7 +54,7 @@ namespace RpgGame
         }
         public void MoveUp(FoxDraw foxDraw)
         {
-            if (position > 9)
+            if (Map.floorSurfaceList.Contains(position - 10) &&  position > 9)
             {
                 foxDraw.AddImage("./Assets/hero-up.png", Map.CoordinateCollection[position -= 10]);
             }
@@ -64,7 +65,7 @@ namespace RpgGame
         }
         public void MoveDown(FoxDraw foxDraw)
         {
-            if (position < 90)
+            if (Map.floorSurfaceList.Contains(position + 10) && position < 90)
             {
                 foxDraw.AddImage("./Assets/hero-down.png", Map.CoordinateCollection[position += 10]);
             }
@@ -72,6 +73,6 @@ namespace RpgGame
             {
                 foxDraw.AddImage("./Assets/hero-down.png", Map.CoordinateCollection[position]);
             }
-        }
+        }        
     }
 }

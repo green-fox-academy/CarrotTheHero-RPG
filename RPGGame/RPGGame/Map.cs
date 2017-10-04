@@ -20,7 +20,7 @@ namespace RpgGame
     class Map
     {
         public static PointCollection CoordinateCollection = new PointCollection();
-        public List<int> floorSurfaceList = new List<int>();
+        public static List<int> floorSurfaceList = new List<int>();
 
         public Map(FoxDraw foxDraw)
         {
