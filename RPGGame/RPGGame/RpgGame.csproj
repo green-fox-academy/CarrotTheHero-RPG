@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Boss.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Enemy.cs" />
     <Compile Include="FoxDraw.cs" />
     <Compile Include="GameHud.cs" />
     <Compile Include="GameLogic.cs" />
