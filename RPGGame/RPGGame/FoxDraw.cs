@@ -51,45 +51,45 @@ namespace GreenFox
         //    SetPosition(ellipse, x, y);
         //}
 
-        public void DrawLine(Point p1, Point p2)
-        {
-            var line = new Line()
-            {
-                Stroke = LineColor,
-                X1 = p1.X,
-                Y1 = p1.Y,
-                X2 = p2.X,
-                Y2 = p2.Y
-            };
+        //public void DrawLine(Point p1, Point p2)
+        //{
+        //    var line = new Line()
+        //    {
+        //        Stroke = LineColor,
+        //        X1 = p1.X,
+        //        Y1 = p1.Y,
+        //        X2 = p2.X,
+        //        Y2 = p2.Y
+        //    };
 
-            Canvas.Children.Add(line);
-        }
+        //    Canvas.Children.Add(line);
+        //}
 
-        public void DrawLine(double x1, double y1, double x2, double y2)
-        {
-            var line = new Line()
-            {
-                Stroke = LineColor,
-                X1 = x1,
-                Y1 = y1,
-                X2 = x2,
-                Y2 = y2
-            };
+        //public void DrawLine(double x1, double y1, double x2, double y2)
+        //{
+        //    var line = new Line()
+        //    {
+        //        Stroke = LineColor,
+        //        X1 = x1,
+        //        Y1 = y1,
+        //        X2 = x2,
+        //        Y2 = y2
+        //    };
 
-            Canvas.Children.Add(line);
-        }
+        //    Canvas.Children.Add(line);
+        //}
 
-        public void DrawPolygon(IEnumerable<Point> points)
-        {
-            var polygon = new Polygon()
-            {
-                Stroke = LineColor,
-                Fill = ShapeColor,
-                Points = ListToPointCollection(points)
-            };
+        //public void DrawPolygon(IEnumerable<Point> points)
+        //{
+        //    var polygon = new Polygon()
+        //    {
+        //        Stroke = LineColor,
+        //        Fill = ShapeColor,
+        //        Points = ListToPointCollection(points)
+        //    };
 
-            Canvas.Children.Add(polygon);
-        }
+        //    Canvas.Children.Add(polygon);
+        //}
 
         //public void DrawRectangle(double x, double y, double width, double height)
         //{
@@ -124,10 +124,10 @@ namespace GreenFox
             SetPosition(canvas, coordinate);
         }
 
-        public void SetPosition(UIElement uIElement, Point coordinate)
+        public void SetPosition(UIElement uIElement, Point coordiante)
         {
-            Canvas.SetLeft(uIElement, coordinate.X);
-            Canvas.SetTop(uIElement, coordinate.Y);
+            Canvas.SetLeft(uIElement, coordiante.X);
+            Canvas.SetTop(uIElement, coordiante.Y);
         }
 
         public PointCollection ListToPointCollection(IEnumerable<Point> points)

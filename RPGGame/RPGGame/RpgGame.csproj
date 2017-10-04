@@ -58,14 +58,9 @@
     <Compile Include="Character.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="FoxDraw.cs" />
-    <Compile Include="GameHud.cs" />
-    <Compile Include="GameLogic.cs" />
-    <Compile Include="GameScreen.cs" />
-    <Compile Include="GameWindow.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Skeleton.cs" />
-    <Compile Include="Tiles.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

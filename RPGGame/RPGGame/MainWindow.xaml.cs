@@ -20,12 +20,49 @@ namespace RpgGame
     public partial class MainWindow : Window
     {
         public Random rnd = new Random();
+        FoxDraw foxDraw;
+        Hero hero;
+        Character character;
+        Map map;
 
         public MainWindow()
         {
             InitializeComponent();
-            FoxDraw foxDraw = new FoxDraw(canvas);
-            Map map = new Map(foxDraw);
+            foxDraw = new FoxDraw(canvas);
+            map = new Map(foxDraw);
+            hero = new Hero(foxDraw);
+            character = new Character();
+        }
+
+        private void WindowKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+            {
+                foxDraw.ClearCanvas();
+                map.MapDraw(foxDraw);
+                hero.MoveLeft(foxDraw);
+            }
+
+            if (e.Key == Key.Right)
+            {
+                foxDraw.ClearCanvas();
+                map.MapDraw(foxDraw);
+                hero.MoveRight(foxDraw);
+            }
+
+            if (e.Key == Key.Up)
+            {
+                foxDraw.ClearCanvas();
+                map.MapDraw(foxDraw);
+                hero.MoveUp(foxDraw);
+            }
+
+            if (e.Key == Key.Down)
+            {
+                foxDraw.ClearCanvas();
+                map.MapDraw(foxDraw);
+                hero.MoveDown(foxDraw);
+            }
         }
     }
 }
